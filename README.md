@@ -18,20 +18,30 @@ To get this repository up and running, follow these steps:
 #### Setup and Installation ####
 1.  **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-username/llm_agentic_ai.git
+    git clone https://github.com/SatyaAmitha/llm_agentic_ai.git
     cd llm_agentic_ai
     ```
 2.  **Create and Activate a Virtual Environment**:
-    Use `uv` to create a virtual environment and synchronize dependencies.
+    Using `uv` (recommended):
     ```bash
     uv venv
-    source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+    # Windows (PowerShell / CMD):
+    .venv\Scripts\activate
+    # macOS / Linux:
+    # source .venv/bin/activate
+    ```
+    Or with standard Python:
+    ```bash
+    python -m venv .venv
+    .venv\Scripts\activate          # Windows
+    # source .venv/bin/activate     # macOS / Linux
     ```
 3.  **Install Dependencies**:
-    Synchronize the dependencies listed in `requirements.txt` using `uv`.
     ```bash
     uv sync
+    # or: pip install -r requirements.txt
     ```
+4.  **Create `.env`** in the project root (see below). Never commit this file.
 
 #### Environment Variables ####
 Create a `.env` file in the **project root** (never commit it). Labs and apps read LLM settings from here.
